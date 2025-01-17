@@ -86,7 +86,7 @@
       [ "pico:GND.4", "r3:1", "black", [ "h-19.2", "v67.24" ] ],
       [ "led1:C", "r1:2", "green", [ "h0" ] ],
       [ "led2:C", "r2:2", "blue", [ "h0" ] ],
-      [ "led3:C", "r3:2", "green", [ "h0" ] ],
+      [ "led3:C", "r3:2", "red", [ "h0" ] ],
       [ "pico:GP9", "keypad1:R1", "orange", [ "h-307.2", "v249.6", "h-268.8" ] ],
       [ "keypad1:R2", "pico:GP8", "orange", [ "v96", "h249.2", "v-249.6" ] ],
       [ "keypad1:R3", "pico:GP7", "orange", [ "v86.4", "h230.1", "v-249.6" ] ],
