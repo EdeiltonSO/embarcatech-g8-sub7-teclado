@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build\embarcatech-g8-sub7-teclado.hex'
+elf = 'build\embarcatech-g8-sub7-teclado.elf'
