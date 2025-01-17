@@ -94,7 +94,7 @@
       [ "keypad1:C1", "pico:GP4", "orange", [ "v67.2", "h191.9", "v-259.2" ] ],
       [ "keypad1:C2", "pico:GP3", "orange", [ "v57.6", "h172.8", "v-259.2" ] ],
       [ "keypad1:C3", "pico:GP2", "orange", [ "v48", "h153.45", "v-259.2" ] ],
-      [ "keypad1:C4", "pico:GP1", "orange", [ "v38.4", "h134.1", "v-278.4" ] ]
+      [ "keypad1:C4", "pico:GP0", "orange", [ "v38.4", "h134.1", "v-278.4" ] ]
     ],
     "dependencies": {}
   }
