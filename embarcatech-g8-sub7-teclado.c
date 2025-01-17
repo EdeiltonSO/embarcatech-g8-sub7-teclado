@@ -94,5 +94,9 @@ void mapearTeclado(char *caractere)
         // Inserir o código para emitir um som com o buzzer
         
         break;
+    
+    default:
+        // Inserir o código para desligar TODOS os leds
+    break;
     }
 }
