@@ -106,18 +106,15 @@ void mapearTeclado(char *caractere) {
     switch (*caractere) {
 
         case 'A':
-            // Inserir o código para ligar o led vermelho
-
+            led_vermelho();
             break;
 
         case 'B':
-            // Inserir o código para ligar o led azul
-
+            led_azul();
             break;
 
         case 'C':
-            // Inserir o código para ligar o led verde
-
+            led_verde();
             break;
 
         case 'D':
