@@ -134,11 +134,8 @@ void mapearTeclado(char *caractere) {
 
             break;
 
-        case '*':
-            all_leds_off();
-            break;
-
         default:
+            all_leds_off();
         break;
     }
 }
