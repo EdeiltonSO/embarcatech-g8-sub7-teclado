@@ -111,6 +111,13 @@ void all_leds_off() {
     gpio_put(led_pin_vermelho, false);
 }
 
+//Aciona todos os leds
+void leds_simultaneos(){
+    gpio_put(led_pin_verde,true);
+    gpio_put(led_pin_azul,true);
+    gpio_put(led_pin_vermelho,true);
+}
+
 // Inicializa o buzzer
 void buzzer_init() {
     gpio_init(BUZZER_PIN);
@@ -140,7 +147,7 @@ void mapearTeclado(char *caractere) {
             led_verde();
             break;
         case 'D':
-            // Inserir o código para ligar TODOS os leds
+            leds_simultaneos();
             break;
         case '#':
             buzzer_beep_one_second();
