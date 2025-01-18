@@ -5,6 +5,9 @@
 #define led_pin_azul 12
 #define led_pin_vermelho 13
 
+// Configuração do buzzer
+#define BUZZER_PIN 21 // Pino conectado ao buzzer
+
 const uint PIN_COLUMNS[] = {5,4,3,2};
 const uint PINS_ROWS[] = {9,8,7,6};
 
@@ -21,6 +24,8 @@ void led_verde();
 void led_azul();
 void led_vermelho();
 void all_leds_off();
+void buzzer_init();
+void buzzer_beep_one_second();
 
 void inicializarTeclado();
 char verificarPinosAtivos();
@@ -30,6 +35,7 @@ int main() {
     stdio_init_all();
     inicializarTeclado();
     initleds();
+    buzzer_init();
 
     while (true) {
         char c = '\0';
@@ -75,31 +81,28 @@ void initleds() {
     gpio_init(led_pin_verde);
     gpio_init(led_pin_azul);
     gpio_init(led_pin_vermelho);
-    // Definindo as portas dos leds como saida
-    gpio_set_dir(led_pin_verde,GPIO_OUT);
-    gpio_set_dir(led_pin_azul,GPIO_OUT);
-    gpio_set_dir(led_pin_vermelho,GPIO_OUT);
+    // Definindo as portas dos leds como saída
+    gpio_set_dir(led_pin_verde, GPIO_OUT);
+    gpio_set_dir(led_pin_azul, GPIO_OUT);
+    gpio_set_dir(led_pin_vermelho, GPIO_OUT);
 }
 
 void led_verde() {
-    //Ligando led verde, desligando as outras
-    gpio_put(led_pin_verde,true);
-    gpio_put(led_pin_azul,false);
-    gpio_put(led_pin_vermelho,false);
+    gpio_put(led_pin_verde, true);
+    gpio_put(led_pin_azul, false);
+    gpio_put(led_pin_vermelho, false);
 }
 
 void led_azul() {
-    //Ligando led azul, desligando as outras
-    gpio_put(led_pin_verde,false);
-    gpio_put(led_pin_azul,true);
-    gpio_put(led_pin_vermelho,false);
+    gpio_put(led_pin_verde, false);
+    gpio_put(led_pin_azul, true);
+    gpio_put(led_pin_vermelho, false);
 }
 
 void led_vermelho() {
-    //Ligando led vermelho, desligando as outras
-    gpio_put(led_pin_verde,false);
-    gpio_put(led_pin_azul,false);
-    gpio_put(led_pin_vermelho,true);
+    gpio_put(led_pin_verde, false);
+    gpio_put(led_pin_azul, false);
+    gpio_put(led_pin_vermelho, true);
 }
 
 void all_leds_off() {
@@ -108,34 +111,42 @@ void all_leds_off() {
     gpio_put(led_pin_vermelho, false);
 }
 
+// Inicializa o buzzer
+void buzzer_init() {
+    gpio_init(BUZZER_PIN);
+    gpio_set_dir(BUZZER_PIN, GPIO_OUT);
+    gpio_put(BUZZER_PIN, 0); // Garante que o buzzer esteja desligado inicialmente
+}
+
+// Emite som no buzzer por 1 segundo
+void buzzer_beep_one_second() {
+    for (int i = 0; i < 1000; i++) {
+        gpio_put(BUZZER_PIN, 1); // Liga o buzzer
+        sleep_us(500);          // Aguarda metade do ciclo
+        gpio_put(BUZZER_PIN, 0); // Desliga o buzzer
+        sleep_us(500);          // Aguarda metade do ciclo
+    }
+}
+
 void mapearTeclado(char *caractere) { 
-
     switch (*caractere) {
-
         case 'A':
             led_vermelho();
             break;
-
         case 'B':
             led_azul();
             break;
-
         case 'C':
             led_verde();
             break;
-
         case 'D':
             // Inserir o código para ligar TODOS os leds
-
             break;
-
         case '#':
-            // Inserir o código para emitir um som com o buzzer
-
+            buzzer_beep_one_second();
             break;
-
         default:
             all_leds_off();
-        break;
+            break;
     }
 }
