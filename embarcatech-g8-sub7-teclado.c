@@ -20,6 +20,7 @@ void initleds();
 void led_verde(); 
 void led_azul();
 void led_vermelho();
+void all_leds_off();
 
 void inicializarTeclado();
 char verificarPinosAtivos();
@@ -101,6 +102,12 @@ void led_vermelho() {
     gpio_put(led_pin_vermelho,true);
 }
 
+void all_leds_off() {
+    gpio_put(led_pin_verde, false);
+    gpio_put(led_pin_azul, false);
+    gpio_put(led_pin_vermelho, false);
+}
+
 void mapearTeclado(char *caractere) { 
 
     switch (*caractere) {
@@ -127,8 +134,11 @@ void mapearTeclado(char *caractere) {
 
             break;
 
+        case '*':
+            all_leds_off();
+            break;
+
         default:
-            // Inserir o código para desligar TODOS os leds
         break;
     }
 }
