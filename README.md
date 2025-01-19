@@ -35,11 +35,16 @@ Observações:
 
 A configuração sugerida para executar o projeto é:
 
-1. Ter o [MinGW](https://sourceforge.net/projects/mingw/) (contém o GCC e Make) instalado na sua máquina;
-2. Ter o [Visual Studio Code](https://code.visualstudio.com/download) instalado na sua máquina;
-3. Ter este repositório clonado na sua máquina;
-4. Ter a extensão [Raspberry Pi Pico](https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico) instalada no seu VS Code;
-5. Ter a extensão [Wokwi Simulator](https://marketplace.visualstudio.com/items?itemName=Wokwi.wokwi-vscode) instalada no seu VS Code.
+1. Ter o [Pico SDK](https://github.com/raspberrypi/pico-sdk) instalado na sua máquina;
+2. Ter o [ARM GNU Toolchain](https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain) instalado na sua máquina;
+3. Ter o [Visual Studio Code](https://code.visualstudio.com/download) instalado na sua máquina;
+4. Ter este repositório clonado na sua máquina;
+5. Ter as seguintes extensões instaladas no seu VS Code:
+- [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools);
+- [CMake](https://marketplace.visualstudio.com/items?itemName=twxs.cmake);
+- [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools);
+- [Raspberry Pi Pico](https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico);
+- [Wokwi Simulator](https://marketplace.visualstudio.com/items?itemName=Wokwi.wokwi-vscode).
 
 No Linux, GCC e Make normalmente já estão disponíveis de forma nativa.
 
