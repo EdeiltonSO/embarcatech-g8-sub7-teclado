@@ -39,7 +39,7 @@ A configuração sugerida para executar o projeto é:
 2. Ter o [Visual Studio Code](https://code.visualstudio.com/download) instalado na sua máquina;
 3. Ter este repositório clonado na sua máquina;
 4. Ter a extensão [Raspberry Pi Pico](https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico) instalada no seu VS Code;
-5. Ter o extensão [Wokwi Simulator](https://marketplace.visualstudio.com/items?itemName=Wokwi.wokwi-vscode) instalada no seu VS Code.
+5. Ter a extensão [Wokwi Simulator](https://marketplace.visualstudio.com/items?itemName=Wokwi.wokwi-vscode) instalada no seu VS Code.
 
 No Linux, GCC e Make normalmente já estão disponíveis de forma nativa.
 
