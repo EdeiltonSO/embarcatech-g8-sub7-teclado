@@ -103,12 +103,9 @@ Conventional Commits seguem uma estrutura fixa como feat, fix, docs e style, o q
 As labels em pull requests ajudam a identificar o escopo das tarefas. Nesse projeto, utilizamos:
 
 - `bugfix`: para correção de bugs
-- `concluído`: para indicar uma issue já resolvida
 - `documentação`: para indicar melhorias ou inclusões na documentação
 - `readonly`: para indicar informação ou histórico
 - `novidade`: para indicar a implementação de uma nova feature
-- `pendência`: para indicar uma tarefa que ainda precisa ser feita
-- `teste`: para indicar testes de recursos do código ou do processo
 
 ### Branches nomeadas segundo o escopo
 
